@@ -1,0 +1,14 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.65.151:8080
+functions:
+  sqs-p2plending-response:
+    lang: python3
+    handler: ./sqs-p2plending-response
+    image: jtl-tkgiharbor.hq.bni.co.id/wss-dev/sqs-p2plending-response:getsps.1
+    environment: 
+        write_debug: true
+        combine_output: false
+        read_timeout: 45s
+        write_timeout: 45s
