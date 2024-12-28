@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MultiHostPayment xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- =============================== -->
+  <!-- Channel Parameters              -->
+  <!-- =============================== -->
+  <channel id="IBANK"       branch="0996" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="NEWIBANK"    branch="0996" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="BNI_DIRECT"  branch="0989" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="BNIDIRECT"   branch="0989" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="ATM"         branch="0997" teller="00004" overrideFlag="I" tandemFlag="0"/>
+  <channel id="SMS"         branch="0992" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="MINI_ATM"    branch="0997" teller="00004" overrideFlag="I" tandemFlag="0"/>
+  <!--channel id="AGENT"		branch="0985" teller="00001" overrideFlag="I" tandemFlag="0"/--> <!-- CR17532--> <!--CR19758-->
+  <channel id="AGENT"		branch="0985" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="MOBILE"    	branch="0996" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="TAX"    		branch="0996" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="ATMMP"       branch="0997" teller="00004" overrideFlag="I" tandemFlag="0"/>
+  <channel id="NEWMOBILE"   branch="0991" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  <channel id="API"  		branch="0986" teller="00001" overrideFlag="I" tandemFlag="0"/>
+  
+  <!-- =============================== -->
+  <!-- Servers & Instances Parameters  -->
+  <!-- =============================== -->
+  <server name="SOU0" id="1"/>
+  <server name="SOU1" id="2"/>
+  <server name="SOU2" id="3"/>
+  <server name="SOU3" id="4"/>
+  <server name="LEX0" id="5"/>
+  <server name="LEX1" id="6"/>
+  <server name="LEX2" id="7"/>
+  <server name="LEX3" id="8"/>
+  <server name="RAV0" id="9"/> <!-- DEV : Please delete this config at Prod region-->
+  <server name="RYA0" id="10"/>
+  
+  <!-- =============================== -->
+  <!-- ATM Payment Type Parameters     -->
+  <!-- =============================== -->
+  <payment-type code="00951005"	value="BPJS_KESEHATAN_VA"/>
+  <payment-type code="01271004"	value="IMIGRASI"/>
+  <payment-type code="01280001">
+	<case from="kodeBilling" position="0,1" match="0,1,2,3" value="MPN_G2_DJP"/>
+	<case from="kodeBilling" position="0,1" match="4,5,6" 	value="MPN_G2_DJBC"/>
+	<case from="kodeBilling" position="0,1" match="7,8,9" 	value="MPN_G2_DJA"/>
+  </payment-type>
+  <payment-type code="01251008"	value="BPJS_KETENAGAKERJAAN"/>
+  <payment-type code="01350001"	value="JIWASRAYA"/>
+  <payment-type code="01251009"	value="BPJS_TKBPU"/>
+  <payment-type code="01360001"	value="JICT"/>
+  <payment-type code="01301001"	value="KAI"/>
+  <payment-type code="01302001"	value="KAI"/>
+  <payment-type code="01303001"	value="KAI"/>
+  <payment-type code="01301002"	value="KAI"/>  
+  <payment-type code="01520001"	value="GOPAY"/>
+  <payment-type code="01520002"	value="GOPAY"/>
+  <payment-type code="01520003"	value="GOPAY"/>
+  <payment-type code="00791000"	value="IBS"/>
+  <payment-type code="00791061"	value="NPCT1"/>
+  <payment-type code="00791011"	value="PELINDO_3"/>
+  <payment-type code="00792001"	value="PELINDO_1"/>
+  <payment-type code="00791031"	value="PELINDO_4"/>
+  <payment-type code="00791060"	value="TPK_KOJA"/>
+  <payment-type code="10360001"	value="PEGADAIAN"/>
+  <payment-type code="01550001"	value="BPDP-KS"/>
+  <payment-type code="00791006"	value="PELINDO_2"/>
+  <payment-type code="01260000"	value="TKI"/>
+  <payment-type code="01261001"	value="TKI"/>
+  <payment-type code="01261002"	value="TKI"/>
+  <payment-type code="01420001"	value="BPJS_KESEHATAN_DENDA"/>
+  <payment-type code="00793014"	value="KTMT"/>
+ 
+
+  <payment-type code="10360002"	value="PEGADAIAN"/>  <!-- PEGADAIAN_KCA -->
+
+  <payment-type code="10360003"	value="PEGADAIAN"/>  <!-- PEGADAIAN_MIKRO -->
+  <payment-type code="10650001"	value="ISAKU"/>
+  <payment-type code="10641100"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641111"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641112"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641113"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641114"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641121"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641122"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641131"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641133"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641140"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641141"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641142"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641143"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641151"	value="ANGKASA_PURA_I"/>
+  <payment-type code="10641152"	value="ANGKASA_PURA_I"/>
+  <payment-type code="02000001"	value="LINKAJATCASH"/>
+
+  <!-- =============================== -->
+  <!-- Fee Parameters                  -->
+  <!-- =============================== -->
+  <fee host="PELINDO_2_IDR">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="FIDUSIA">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  <fee host="SP_BPOM">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  <fee host="SP_TPK_KOJA">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  <fee host="IMIGRASI">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  <fee host="BPJS_KESEHATAN">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="SP_TPS">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  <fee host="PKG">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="BPJS_KETENAGAKERJAAN">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="MPN_G2_IDR">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="MPN_G2_USD">
+	<amount currency="USD" value="0"/>
+  </fee>
+  <fee host="PELINDO_1">
+	<amount currency="IDR" value="0"/>
+  </fee>
+   <fee host="TKI">
+	<amount currency="IDR" value="6500"/>
+  </fee>
+  <fee host="BPJS_TKBPU">
+	<amount currency="IDR" value="0"/>
+  </fee>
+
+  <fee host="KAI_ANGKUTBARANG_IDR"> 
+	<amount currency="IDR" value="2000"/>
+  </fee>  
+  <fee host="KAI_SEWA_ASET_IDR"> 
+	<amount currency="IDR" value="3000"/>
+  </fee>
+  <fee host="KAI_TOPUP_AGENT_IDR"> 
+	<amount currency="IDR" value="3500"/>
+  </fee>
+  <fee host="KAI_PICKUP_AGENT_IDR"> 
+	<amount currency="IDR" value="0"/>
+  </fee>  
+  <fee host="KAI_LAINNYA_IDR"> 
+	<amount currency="IDR" value="0"/>
+  </fee>
+
+  <fee host="KAI_ANGKUTBARANG_USD"> 
+	<amount currency="USD" value="1"/>
+  </fee>
+  <fee host="KAI_SEWA_ASET_USD"> 
+	<amount currency="USD" value="1"/>
+  </fee>
+  <fee host="KAI_TOPUP_AGENT_USD"> 
+	<amount currency="USD" value="1"/>
+  </fee>
+  <fee host="KAI_PICKUP_AGENT_USD"> 
+	<amount currency="USD" value="0"/>
+  </fee>  
+  <fee host="KAI_LAINNYA_USD"> 
+	<amount currency="USD" value="0"/>
+  </fee>
+   
+  <fee host="KAI_ANGKUTBARANG_EUR"> 
+	<amount currency="EUR" value="0"/>
+  </fee>  
+  <fee host="KAI_SEWA_ASET_EUR"> 
+	<amount currency="EUR" value="0"/>
+  </fee>	
+  <fee host="KAI_TOPUP_AGENT_EUR"> 
+	<amount currency="EUR" value="0"/>
+  </fee>
+  <fee host="KAI_PICKUP_AGENT_EUR"> 
+	<amount currency="EUR" value="0"/>
+  </fee>  
+  <fee host="KAI_LAINNYA_EUR"> 
+	<amount currency="EUR" value="0"/>
+  </fee>
+    
+  <fee host="JIWASRAYA">
+	<amount currency="IDR" value="0"/>
+  </fee>
+
+  <fee host="PELINDO_3"> 
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="JICT">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="SDPPI">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  
+  <fee host="SDPPI_10">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  
+  <fee host="BPDP-KS">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="BPDP-KS-ATM">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="PIHC_PKG">
+	<amount currency="IDR" value="0"/>
+  </fee>
+   <fee host="PIHC_PKC">
+	<amount currency="IDR" value="0"/>
+  </fee>
+   <fee host="PIHC_PKT">
+	<amount currency="IDR" value="0"/>
+  </fee>
+   <fee host="PIHC_PIM">
+	<amount currency="IDR" value="0"/>
+  </fee>
+   <fee host="PIHC_PSP">
+	<amount currency="IDR" value="0"/>
+  </fee>
+	
+  <fee host="TELUK_LAMONG">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="KTMT">
+	<amount currency="IDR" value="2500"/>
+  </fee>
+ 
+  <fee host="TPK_MKS">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="GOPAY_DRIVER">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="GOPAY_CUSTOMER">
+	<amount currency="IDR" value="1000"/>
+  </fee>
+  
+  <fee host="GOPAY_MERCHANT">
+	<amount currency="IDR" value="0"/>
+  </fee>
+
+  <fee host="ECOLLECTION">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="NPCT1">
+	<amount currency="IDR" value="3000"/>
+  </fee>
+  
+  <fee host="BPJS_KESEHATAN_VA">
+	<amount currency="IDR" value="2500"/>
+  </fee>
+  
+  <fee host="TPK_KOJA">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="BPJS_TKVA">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+   <fee host="BPJS_KESEHATAN_DENDA">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="PEGADAIAN">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  <fee host="PEGADAIAN_KCA">
+
+	<amount currency="IDR" value="0"/>
+
+  </fee>
+  <fee host="PEGADAIAN_MIKRO">
+
+	<amount currency="IDR" value="0"/>
+
+  </fee>
+  
+  <fee host="SDPPI_BIGAMOUNT">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  
+   <fee host="SDPPI_BIGAMOUNT_10">
+	<amount currency="IDR" value="5000"/>
+  </fee>
+  
+ <fee host="BNILIFE">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="ETILANG">
+	<amount currency="IDR" value="0"/>
+  </fee>
+  
+  <fee host="ANGKASA_PURA_I">
+		<amount currency="IDR" value="0"/>
+	</fee>
+  <fee host="ISAKU">
+		<amount currency="IDR" value="0"/>
+	</fee>
+	<fee host="LINKAJATCASH">
+		<amount currency="IDR" value="0"/>
+	</fee>
+
+	<fee host="BNILIFE_MICROPLUS">
+		<amount currency="IDR" value="0"/>
+	</fee>
+	
+	<fee host="IBS_IDR">
+		<amount currency="IDR" value="1500"/>
+	</fee>
+	
+	<fee host="KTMT">
+		<amount currency="IDR" value="2500"/>
+	</fee>
+
+	
+  <!-- =============================== -->
+  <!-- Pupuk Sriwijaya                 -->
+  <!-- =============================== -->
+  <xi:include href="pusri.config.xml"/> 
+  
+  <!-- =============================== -->
+  <!-- Semen Gresik Group              -->
+  <!-- =============================== -->
+  <xi:include href="sgg.config.xml"/> 
+
+  <!-- =============================== -->
+  <!-- Lion Air			       -->
+  <!-- =============================== -->
+  <xi:include href="lionair.config.xml"/> 
+ 
+  <!-- =============================== -->
+  <!-- Pelabuhan Indonesia II          -->
+  <!-- =============================== -->
+  <xi:include href="pelindo2.config.xml"/> 
+
+  <!-- =============================== -->
+  <!-- Fidusia                         -->
+  <!-- =============================== -->
+  <xi:include href="fidusia.config.xml"/> 
+
+  <!-- =============================== -->
+  <!-- Safe Payment                    -->
+  <!-- =============================== -->
+  <xi:include href="safepayment.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- Pelabuhan Indonesia IV          -->
+  <!-- =============================== -->
+  <xi:include href="pelindo4.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- Imigrasi                        -->
+  <!-- =============================== -->
+  <xi:include href="imigrasi.billing.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- BPJS Kesehatan                  -->
+  <!-- =============================== -->
+  <xi:include href="bpjs.kesehatan.config.xml"/>
+ 
+  <!-- =============================== -->
+  <!-- MPN G2		                   -->
+  <!-- =============================== -->
+  <xi:include href="mpn_g2.config.xml"/>
+  <xi:include href="mpn_g2_djp.config.xml"/>
+  <xi:include href="mpn_g2_djbc.config.xml"/>
+  <xi:include href="mpn_g2_dja.config.xml"/>
+  <xi:include href="mpn_g2_reinq.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- Petrokimia Gresik               -->
+  <!-- =============================== -->
+  <xi:include href="pkg.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- BPJS Ketenagakerjaan            -->
+  <!-- =============================== -->
+  <xi:include href="bpjs.ketenagakerjaan.config.xml"/>
+  <xi:include href="bpjs.ketenagakerjaan.reflag.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- Pelabuhan Indonesia I           -->
+  <!-- =============================== -->
+  <xi:include href="pelindo1.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- Point2Host -->
+  <!-- =============================== -->
+  <xi:include href="spc-p2h.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- Tenaga Kerja Indonesia          -->
+  <!-- =============================== -->
+  <xi:include href="tki.config.xml"/>
+  <xi:include href="tki.reflag.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- Kereta Api Indonesia            -->
+  <!-- =============================== -->
+   <xi:include href="kai.config.xml"/> 
+
+  <!-- =============================== -->
+  <!-- BPJS Ketenagakerjaan BPU        -->
+  <!-- =============================== -->
+   <xi:include href="bpjs.tkbpu.config.xml"/> 
+  
+  <!-- =============================== -->
+  <!-- Asuransi Jiwasraya              -->
+  <!-- =============================== -->
+  <xi:include href="jiwasraya.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- Pelabuhan Indonesia III         -->
+  <!-- =============================== -->
+  <xi:include href="pelindo3.config.xml"/>
+  <xi:include href="pelindo3.reflag.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- JICT                            -->
+  <!-- =============================== -->
+  <xi:include href="jict.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- Kominfo SDPPI                   -->
+  <!-- =============================== -->
+  <xi:include href="sdppi.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- BPDP Kelapa Sawit               -->
+  <!-- =============================== -->
+  <xi:include href="bpdpks.config.xml"/>
+
+   <xi:include href="pihc.config.xml"/>
+	
+  <!-- =============================== -->
+  <!-- Teluk Lamong           		   -->
+  <!-- =============================== -->
+  <xi:include href="teluklamong.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- KTMT           				   -->
+  <!-- =============================== -->
+  <xi:include href="ktmt.config.xml"/>
+  <xi:include href="ktmt.reflag.config.xml"/> 
+  
+  <!-- =============================== -->
+  <!-- TPK Makassar                    -->
+  <!-- =============================== -->
+  <xi:include href="tpkmks.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- GOJEK Top Up GOPAY              -->
+  <!-- =============================== -->
+  <xi:include href="gopay.config.xml"/>
+ 
+ 
+  <!-- =============================== -->
+  <!-- NPCT 1                          -->
+  <!-- =============================== -->
+  <!-- =============================== -->
+  <xi:include href="npct1.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- BPJS KESEHATAN VA KELUARGA	   -->
+  <!-- =============================== -->
+  <xi:include href="bpjs.kesehatan.va.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- E-Collection VA Payment         -->
+  <!-- =============================== -->
+  <xi:include href="ecollection.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- TPK KOJA                        -->
+  <!-- =============================== -->
+  <xi:include href="tpkkoja.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- BPJS_TKVA                       -->
+  <!-- =============================== -->
+  <xi:include href="bpjs.ketenagakerjaan.va.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- BPJS KESEHATAN DENDA      	   -->
+  <!-- =============================== -->
+  <xi:include href="bpjs.kesehatan.denda.config.xml"/>
+  <xi:include href="pegadaian.config.xml"/>
+  
+   <xi:include href="vascomm.config.xml"/>
+   <xi:include href="sdppi.bigamount.config.xml"/>
+   <xi:include href="bniLife.config.xml"/>
+   <xi:include href="bnilife.reflag.config.xml"/>
+   <xi:include href="pbb.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- E-TILANG                        -->
+  <!-- =============================== -->
+  <xi:include href="etilang.config.xml"/>
+  
+    <!-- =============================== -->
+	<!-- ANGKASA PURA I                	 -->
+	<!-- =============================== -->
+	<xi:include href="ap1.config.xml"/>
+	
+	<!-- =============================== -->
+	<!-- ANGKASA PURA I REINQUIRY      	 -->
+	<!-- =============================== -->
+	<xi:include href="ap1_reinq.config.xml"/>
+  
+   <!-- =============================== -->
+  <!-- NARINDO                        -->
+  <!-- =============================== -->
+  <xi:include href="narindo.config.xml"/>
+  
+     <!-- =============================== -->
+  <!-- ISAKU                        -->
+  <!-- =============================== -->
+  <xi:include href="isaku.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- LINKAJATCASH                    -->
+  <!-- =============================== -->
+  <xi:include href="linkaja.config.xml"/>
+
+  <!-- =============================== -->
+  <!-- BNILIFE MICROPLUS               -->
+  <!-- =============================== -->
+  <xi:include href="bnilife.microplus.config.xml"/>
+  
+  <!-- lib: saxpath.jar jaxen-core.jar jaxen-jdom.jar -->
+  
+  <!-- =============================== -->
+  <!-- IBS PELINDO                      							    -->
+  <!-- =============================== -->
+  <xi:include href="ibs.config.xml"/>
+  
+  <!-- =============================== -->
+  <!-- IBS PELINDO REINQUIRY           -->
+  <!-- =============================== -->
+  <xi:include href="ibs.reinq.config.xml"/>
+
+</MultiHostPayment>

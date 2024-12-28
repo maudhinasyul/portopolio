@@ -1,0 +1,429 @@
+<?xml version="1.0" standalone="yes"?>
+<config>
+	<combox name="host">
+		<combo id="host">
+			<comboLabel>Jenis Pembayaran</comboLabel>
+			<option id="SGG_PADANG">
+			  <optValue>SGG_PADANG</optValue>
+			  <optText>01. Semen Padang Payment</optText>
+			</option>
+			<option id="PUSRI">
+			  <optValue>PUSRI</optValue>
+			  <optText>02. Pupuk Sriwijaya Payment</optText>
+			</option>
+			<option id="SGG_TONASA">
+			  <optValue>SGG_TONASA</optValue>
+			  <optText>03. Semen Tonasa Payment</optText>
+			</option>
+			<option id="PELINDO_2">
+			  <optValue>PELINDO_2</optValue>
+			  <optText>04. Pelabuhan Indonesia II Payment</optText>
+			</option>
+			<option id="SGG_GRESIK">
+			  <optValue>SGG_GRESIK</optValue>
+			  <optText>05. Semen Gresik Payment</optText>
+			</option>
+			<option id="FIDUSIA">
+			  <optValue>FIDUSIA</optValue>
+			  <optText>06. PNBP AHU Payment</optText>
+			</option>
+			<option id="SP_BPOM">
+			  <optValue>SP_BPOM</optValue>
+			  <optText>07. Badan Pengawas Obat dan Makanan Payment</optText>
+			</option>
+			<option id="SP_TPK_KOJA">
+			  <optValue>SP_TPK_KOJA</optValue>
+			  <optText>08. Terminal Peti Kemas Koja Payment</optText>
+			</option>
+			<option id="TPK_MKS">
+			  <optValue>TPK_MKS</optValue>
+			  <optText>09. Terminal Peti Kemas Makassar Payment</optText>
+			</option>
+			<option id="BPJS_KESEHATAN">
+			  <optValue>BPJS_KESEHATAN</optValue>
+			  <optText>10a. BPJS Kesehatan Badan Usaha</optText>
+			</option>
+			<option id="BPJS_KESEHATAN_VA">
+			  <optValue>BPJS_KESEHATAN_VA</optValue>
+			  <optText>10b. BPJS Kesehatan Perorangan/VA Keluarga</optText>
+			</option>
+			<option id="BPJS_KESEHATAN_DENDA">
+			  <optValue>BPJS_KESEHATAN_DENDA</optValue>
+			  <optText>10c. BPJS Kesehatan Denda</optText>
+			</option>
+			<option id="MPN_G2">
+			  <optValue>MPN_G2</optValue>
+			  <optText>11. MPN G2 Payment</optText>
+			</option>
+			<option id="MPN_G2_REINQ">
+			  <optValue>MPN_G2_REINQ</optValue>
+			  <optText>12. MPN G2 Reinquiry</optText>
+			</option>
+			<option id="SP_TPS">
+			  <optValue>SP_TPS</optValue>
+			  <optText>14. Terminal Petikemas Surabaya Payment</optText>
+			</option>
+			<option id="PKG">
+			  <optValue>PKG</optValue>
+			  <optText>15. Petrokimia Gresik Payment</optText>
+			</option>
+			<option id="BPJS_KETENAGAKERJAAN">
+			  <optValue>BPJS_KETENAGAKERJAAN</optValue>
+			  <optText>16. e-Payment BPJSTK</optText>
+			</option>
+			<option id="REFLAGGING_BPJSTK">
+			  <optValue>REFLAGGING_BPJSTK</optValue>
+			  <optText>17. REFLAGGING BPJSTK</optText>
+			</option>
+			<option id="PELINDO_1">
+			  <optValue>PELINDO_1</optValue>
+			  <optText>18. Pelabuhan Indonesia I Payment</optText>
+			</option>
+			<option id="TKI">
+			  <optValue>TKI</optValue>
+			  <optText>19. Pekerja Migran Indonesia Payment</optText>
+			</option>
+			<option id="TKI_REINQ">
+			  <optValue>TKI_REINQ</optValue>
+			  <optText>20. Pekerja Migran Indonesia Reinquiry</optText>
+			</option>
+			<option id="KAI_ANGKUTBARANG">
+			  <optValue>KAI_ANGKUTBARANG</optValue>
+			  <optText>21. Kereta Api Indonesia (Angkutan Barang)</optText>
+			</option>
+			<option id="KAI_SEWA_ASET">
+			  <optValue>KAI_SEWA_ASET</optValue>
+			  <optText>22. Kereta Api Indonesia (Sewa Aset)</optText>
+			</option>
+			<option id="KAI_TOPUP_AGENT">
+			  <optValue>KAI_TOPUP_AGENT</optValue>
+			  <optText>23. Kereta Api Indonesia (Top Up Agent)</optText>
+			</option>
+			<option id="KAI_PICKUP_AGENT">
+			  <optValue>KAI_PICKUP_AGENT</optValue>
+			  <optText>24a. Kereta Api Indonesia (Pick Up Service)</optText>
+			</option>
+			<option id="KAI_LAINNYA">
+			  <optValue>KAI_LAINNYA</optValue>
+			  <optText>24b. Kereta Api Indonesia (Layanan Lainnya)</optText>
+			</option>
+			<option id="JIWASRAYA">
+			  <optValue>JIWASRAYA</optValue>
+			  <optText>25. JIWASRAYA Payment</optText>
+			</option>
+			<option id="PELINDO_3">
+			  <optValue>PELINDO_3</optValue>
+			  <optText>26. Pelabuhan Indonesia III Payment</optText>
+			</option>
+			<option id="PELINDO_3_REINQ">
+			  <optValue>PELINDO_3_REINQ</optValue>
+			  <optText>27. Pelabuhan Indonesia III Reinquiry</optText>
+			</option>
+			<option id="SDPPI_BIGAMOUNT">
+			  <optValue>SDPPI_BIGAMOUNT</optValue>
+			  <optText>28. Ditjen SDPPI Kemenkominfo</optText>
+			</option>
+			<!--option id="SDPPI">
+			  <optValue>SDPPI</optValue>
+			  <optText>28. Ditjen SDPPI Kemenkominfo</optText>
+			</option-->
+			<option id="BPDP-KS">
+			  <optValue>BPDP-KS</optValue>
+			  <optText>29. BPDP Kelapa Sawit (BPDP KS) Payment</optText>
+			</option>
+			<option id="PIHC">
+			  <optValue>PIHC</optValue>
+			  <optText>30. Pupuk Indonesia Payment</optText>
+			</option>
+			<option id="TELUK_LAMONG">
+			  <optValue>TELUK_LAMONG</optValue>
+			  <optText>31. Teluk Lamong Payment</optText>
+			</option>
+			<option id="PELINDO_4">
+			  <optValue>PELINDO_4</optValue>
+			  <optText>32. Pelabuhan Indonesia IV Payment</optText>
+			</option>
+			<option id="NPCT1">
+			  <optValue>NPCT1</optValue>
+			  <optText>33. New Priok Container Terminal One</optText>
+			</option>
+			<option id="ECOLLECTION">
+			  <optValue>ECOLLECTION</optValue>
+			  <optText>34. Virtual Account Billing Payment</optText>
+			</option>
+			<option id="ETILANG">
+			  <optValue>ETILANG</optValue>
+			  <optText>35. E-Tilang Payment</optText>
+			</option>
+			<option id="PBB">
+			  <optValue>PBB</optValue>
+			  <optText>36. Pajak Bumi dan Bangunan</optText>
+			</option>
+			<option id="ANGKASA_PURA_I">
+			  <optValue>ANGKASA_PURA_I</optValue>
+			  <optText>37. Angkasa Pura I Payment</optText>
+			</option>
+			<option id="ANGKASA_PURA_I_REINQ">
+			  <optValue>ANGKASA_PURA_I_REINQ</optValue>
+			  <optText>38. Angkasa Pura I Reinquiry</optText>
+			</option>
+			<option id="KTMT">
+			  <optValue>KTMT</optValue>
+			  <optText>39. KTMT Payment</optText>
+			</option>
+			<option id="IBS">
+			  <optValue>IBS</optValue>
+			  <optText>40. IBS Pelindo</optText>
+			</option>
+			<option id="KTMT_REINQ">
+			  <optValue>KTMT_REINQ</optValue>
+			  <optText>41. KTMT Reinquiry</optText>
+			</option>
+			<option id="IBS_REINQ">
+			  <optValue>IBS_REINQ</optValue>
+			  <optText>42. IBS Pelindo Reinquiry</optText>
+			</option>
+		</combo>
+	</combox>
+	<combox name="currency">
+		<combo id="PELINDO_2">
+			<comboLabel>Currency</comboLabel>
+			<option>
+			  <optValue>IDR</optValue>
+			  <optText>IDR: Indonesia Rupiah</optText>
+			</option>
+			<option>
+			  <optValue>USD</optValue>
+			  <optText>USD: US Dollar</optText>
+			</option>
+		</combo>
+		<combo id="MPN_G2">
+			<comboLabel>Currency</comboLabel>
+			<option>
+			  <optValue>IDR</optValue>
+			  <optText>IDR: Indonesia Rupiah</optText>
+			</option>
+			<option>
+			  <optValue>USD</optValue>
+			  <optText>USD: US Dollar</optText>
+			</option>
+		</combo>
+		<combo id="MPN_G2_REINQ">
+			<comboLabel>Currency</comboLabel>
+			<option>
+			  <optValue>IDR</optValue>
+			  <optText>IDR: Indonesia Rupiah</optText>
+			</option>
+			<option>
+			  <optValue>USD</optValue>
+			  <optText>USD: US Dollar</optText>
+			</option>
+		</combo>
+		<combo id="IBS">
+			<comboLabel>Currency</comboLabel>
+			<option>
+			  <optValue>IDR</optValue>
+			  <optText>IDR: Indonesia Rupiah</optText>
+			</option>
+		</combo>		
+		<combo id="BPJS_KETENAGAKERJAAN">
+			<comboLabel>Jenis Tagihan</comboLabel>
+			<option>
+			  <optValue>EPS</optValue>
+			  <optText>1. EPS (Perusahaan)</optText>
+			</option>
+			<option>
+			  <optValue>BPU</optValue>
+			  <optText>2. Perorangan (BPU)</optText>
+			</option>
+			<option>
+			  <optValue>VA</optValue>
+			  <optText>3. EPS (Virtual Account)</optText>
+			</option>
+		</combo>
+		<combo id="SDPPI_BIGAMOUNT">
+			<comboLabel>Tipe Pembayaran</comboLabel>
+			<option>
+				<optValue>10</optValue>
+				<optText>10: BHP Frekuensi</optText>
+			</option>
+			<option>
+				<optValue>20</optValue>
+				<optText>20: REOR</optText>
+			</option>
+			<option>
+				<optValue>30</optValue>
+				<optText>30: SKOR</optText>
+			</option>
+			<option>
+				<optValue>40</optValue>
+				<optText>40: UNAR</optText>
+			</option>
+			<option>
+				<optValue>50</optValue>
+				<optText>50: IAR</optText>
+			</option>
+			<option>
+				<optValue>60</optValue>
+				<optText>60: IKRAP</optText>
+			</option>
+			<option>
+				<optValue>70</optValue>
+				<optText>70: SERTIFIKASI PERANGKAT</optText>
+			</option>
+			<option>
+				<optValue>80</optValue>
+				<optText>80: PAP</optText>
+			</option>
+		</combo>
+		<combo id="PIHC">
+			<comboLabel>Institusi</comboLabel>
+			<option>
+			  <optValue>PKG</optValue>
+			  <optText>1.PT Petrokima Gresik – PKG</optText>
+			</option>
+			<option>
+			  <optValue>PKC</optValue>
+			  <optText>2.PT Pupuk Kujang Cikampek – PKC</optText>
+			</option>
+			<option>
+			  <optValue>PKT</optValue>
+			  <optText>3.PT Pupuk Kalimantan Timur – PKT</optText>
+			</option>
+			<option>
+			  <optValue>PIM</optValue>
+			  <optText>4.PT Pupuk Iskandar Muda – PIM</optText>
+			</option>
+			<option>
+			  <optValue>PSP</optValue>
+			  <optText>5.PT Pupuk Sriwidjaja Palembang – PSP</optText>
+			</option>
+		</combo>
+	</combox>
+
+	<combox name="period">
+		<combo id="BPJS_KETENAGAKERJAAN">
+			<comboLabel>Periode</comboLabel>
+			<option>
+			  <optValue>1</optValue>
+			  <optText>1 bulan</optText>
+			</option>
+			<option>
+			  <optValue>3</optValue>
+			  <optText>3 bulan</optText>
+			</option>
+			<option>
+			  <optValue>6</optValue>
+			  <optText>6 bulan</optText>
+			</option>
+			<option>
+			  <optValue>12</optValue>
+			  <optText>12 bulan</optText>
+			</option>
+		</combo>
+	</combox>
+
+	<!-- perubahan input tipe pembayaran -->
+	
+
+	<fieldLabel>
+		<field id="SGG_PADANG.fBillingId1">Kode RN</field>
+		<field id="PUSRI.fBillingId1">ID Pelanggan</field>
+		<field id="SGG_TONASA.fBillingId1">Kode RN</field>
+		<field id="PELINDO_2.fBillingId1">Billing No.</field>
+		<field id="SGG_GRESIK.fBillingId1">Kode RN</field>
+		<field id="FIDUSIA.fBillingId1">No. Billing</field>
+		<field id="SP_BPOM.fBillingId1">Kode Bayar</field>
+		<field id="SP_TPK_KOJA.fBillingId1">Nomor Billing</field>
+		<field id="TPK_MKS.fBillingId1">Billing No.</field>
+		<field id="BPJS_KESEHATAN.fBillingId1">Nomor Billing</field>
+		<field id="MPN_G2.fBillingId1">Kode Billing</field>
+		<field id="MPN_G2_REINQ.fBillingId1">Kode Billing</field>
+		<field id="SP_TPS.fBillingId1">Nomor Billing</field>
+		<field id="PKG.fBillingId1">Kode Pembayaran</field>
+		<field id="BPJS_KETENAGAKERJAAN.fBillingId1">Kode Iuran / NIK</field>
+		<field id="REFLAGGING_BPJSTK.fBillingId1">Kode Iuran</field>
+		<field id="PELINDO_1.fBillingId1">Billing No.</field>
+		<field id="TKI.fBillingId1">No Tagihan</field>
+		<field id="TKI_REINQ.fBillingId1">No Tagihan</field>
+		<field id="KAI_ANGKUTBARANG.fBillingId1">Nomor Billing</field>
+		<field id="KAI_LAINNYA.fBillingId1">Nomor Billing</field>
+		<field id="KAI_SEWA_ASET.fBillingId1">Nomor Billing</field>
+		<field id="KAI_TOPUP_AGENT.fBillingId1">Nomor Billing</field>
+		<field id="KAI_PICKUP_AGENT.fBillingId1">Nomor Billing</field>
+		<field id="JIWASRAYA.fBillingId1">Nomor Polis</field>
+		<field id="PELINDO_3.fBillingId1">Nomor Billing</field>
+		<field id="PELINDO_3_REINQ.fBillingId1">Nomor Billing</field>
+		<field id="SDPPI.fBillingId1">Invoice ID</field>
+		<field id="BPDP-KS.fBillingId1">Nomor Billing</field>
+		<field id="PIHC.fBillingId1">Kode Billing</field>
+		<field id="TELUK_LAMONG.fBillingId1">Billing No.</field>
+		<field id="PELINDO_4.fBillingId1">Billing No.</field>
+		<field id="ECOLLECTION.fBillingId1">Nomor VA</field>
+		<field id="NPCT1.fBillingId1">Nomor Billing</field>
+		<field id="BPJS_KESEHATAN_VA.fBillingId1">Nomor VA</field>
+		<field id="BPJS_KESEHATAN_DENDA.fBillingId1">Nomor VA</field>
+		<field id="SDPPI_BIGAMOUNT.fBillingId1">Invoice ID</field>
+		<field id="ETILANG.fBillingId1">Identifikasi Nomor Tilang</field>
+		<field id="PBB.fBillingId1">Nomor Objek Pajak</field>
+		<field id="ANGKASA_PURA_I.fBillingId1">Nomor VA</field>
+		<field id="ANGKASA_PURA_I_REINQ.fBillingId1">Nomor VA</field>
+		<field id="KTMT.fBillingId1">No. Proforma</field>
+		<field id="IBS.fBillingId1">Nomor Billing</field>
+		<field id="KTMT_REINQ.fBillingId1">No. Proforma</field>
+		<field id="IBS_REINQ.fBillingId1">Billing No.</field>
+	</fieldLabel>
+	<inputText name="paymentType">
+		<value id="SGG_PADANG">SGG</value>
+		<value id="PUSRI">PUSRI</value>
+		<value id="SGG_TONASA">SGG</value>
+		<value id="PELINDO_2">PELINDO_2</value>
+		<value id="SGG_GRESIK">SGG</value>
+		<value id="FIDUSIA">FIDUSIA</value>
+		<value id="SP_BPOM">SAFE_PAYMENT</value>
+		<value id="SP_TPK_KOJA">SAFE_PAYMENT</value>
+		<value id="TPK_MKS">TPK_MKS</value>
+		<value id="BPJS_KESEHATAN">BPJS_KESEHATAN</value>
+		<value id="MPN_G2">MPN_G2</value>
+		<value id="MPN_G2_REINQ">MPN_G2_REINQ</value>
+		<value id="SP_TPS">SAFE_PAYMENT</value>
+		<value id="PKG">PKG</value>
+		<value id="BPJS_KETENAGAKERJAAN">BPJS_KETENAGAKERJAAN</value>
+		<value id="REFLAGGING_BPJSTK">REFLAGGING_BPJSTK</value>
+		<value id="PELINDO_1">PELINDO_1</value>
+		<value id="TKI">TKI</value>
+		<value id="TKI_REINQ">TKI_REINQ</value>
+		<value id="KAI_ANGKUTBARANG">KAI</value>
+		<value id="KAI_LAINNYA">KAI</value>
+		<value id="KAI_SEWA_ASET">KAI</value>
+		<value id="KAI_TOPUP_AGENT">KAI</value>
+		<value id="KAI_PICKUP_AGENT">KAI</value>
+		<value id="JIWASRAYA">JIWASRAYA</value>
+		<value id="PELINDO_3">PELINDO_3</value>
+		<value id="PELINDO_3_REINQ">PELINDO_3_REINQ</value>
+		<value id="SDPPI">SDPPI</value>
+		<value id="BPDP-KS">BPDP-KS</value>
+		<value id="PIHC">PIHC</value>
+		<value id="TELUK_LAMONG">TELUK_LAMONG</value>
+		<value id="PELINDO_4">PELINDO_4</value>
+		<value id="ECOLLECTION">ECOLLECTION</value>
+		<value id="NPCT1">NPCT1</value>
+		<value id="BPJS_KESEHATAN_VA">BPJS_KESEHATAN_VA</value>
+		<value id="BPJS_KESEHATAN_DENDA">BPJS_KESEHATAN_DENDA</value>
+		<value id="SDPPI_BIGAMOUNT">SDPPI_BIGAMOUNT</value>
+		<value id="ETILANG">ETILANG</value>
+		<value id="PBB">PBB</value>
+		<value id="ANGKASA_PURA_I">ANGKASA_PURA_I</value>
+		<value id="ANGKASA_PURA_I_REINQ">ANGKASA_PURA_I_REINQ</value>
+		<value id="KTMT">KTMT</value>
+		<value id="IBS">IBS</value>
+		<value id="KTMT_REINQ">KTMT_REINQ</value>
+		<value id="IBS_REINQ">IBS_REINQ</value>
+	</inputText>
+	<labels>
+		<label id="FIDUSIA">
+			<title>Keterangan</title>
+			<text>Billing Statis PNBP Kewarganegaraan Lihat di Daftar Billing Statis AHU / BNI FORUM</text>
+		</label>
+	</labels>
+ </config>

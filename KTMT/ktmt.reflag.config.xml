@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<!-- =========================================================== -->
+<!-- Message Configuration for Pelabuhan Indonesia I Payment     -->
+<!-- =========================================================== -->
+<application paymentType="KTMT_REINQ" >
+
+    <!-- ======================================================== -->
+	<!-- General Parameters                                       -->
+	<!-- ======================================================== -->
+	<general-param id="mhpType" value="H2H"/>
+	<general-param id="hostId"  value="KTMT"/>
+	<general-param id="paymentLogDeleteClass"		value="KTMT.removePaymentLog"/>
+	
+    <!-- ======================================================== -->
+	<!-- Re-Inquiry Process				            -->
+    <!-- ======================================================== -->
+	<mhp-transaction name="TX095450" ns="http://service.bni.co.id/bancslink/mhp">
+		
+		<!-- objects declaration -->
+		<object id="Request"      contentName="TX095450"    contentNS="http://service.bni.co.id/bancslink/mhp" />
+		<object id="Response"     contentName="RX095450"    contentNS="http://service.bni.co.id/bancslink/mhp"/>
+		
+		<action id="CustomTransaction" class="KTMT.reflagging"/>
+		    <response-set id="CustomResponse" class="KTMT.reflaggingResponse"/>
+	</mhp-transaction>
+   
+   <!-- ======================================================== -->
+	<!-- Payment  Process                                         -->
+	<!-- ======================================================== -->    
+   <mhp-transaction name="TX095491" ns="http://service.bni.co.id/bancslink/ktmt" logTransaction="true" extendedLog="true">
+		
+		<!-- object declaration -->		
+		<object id="Request"      contentName="TX095491"    contentNS="http://service.bni.co.id/bancslink/ktmt" />	 		 		
+		<object id="Response"     contentName="RX095491"    contentNS="http://service.bni.co.id/bancslink/ktmt" receiptName="KTMTReceipt"/>
+		<object id="HostRequest"  contentName="PaymentReq" 	contentNS="http://service.bni.co.id/mhp/ktmt" />	 
+		<object id="HostResponse" contentName="PaymentRes" 	contentNS="http://service.bni.co.id/mhp/ktmt" />
+				
+		<action id="SendToHost" request="HostRequest" response="HostResponse"> 
+		    <field method="map"   from="{Request}Body/h_performaNo" to="{HostRequest}content/performaNo"/>
+		    <field method="map"   from="{Request}Body/h_currency"   to="{HostRequest}content/currency"/>
+		    <field method="map"   from="{Request}Body/h_amount"     to="{HostRequest}content/amount"/>
+		    <field method="map"   from="{Request}Body/h_fee"        to="{HostRequest}content/fee"/>
+			<field method="map"   from="{Request}Body/CHANNEL"      to="{HostRequest}content/journalNumber"  subMethod="case-map">
+				<case-map for="ATM" 		type="field" 	from="{Request}Body/c_journalNumber" />
+				<case-map for="MINI_ATM" 	type="field" 	from="{Request}Body/c_journalNumber" />
+				<case-map for="TELLER" 		type="field" 	from="{Request}Body/c_journalNumber" />
+				<case-map for="SMS"   		type="field"	from="{McpResponse}journalNumber" />
+				<case-map for="IBANK"   	type="field"	from="{McpResponse}journalNumber" />
+				<case-map for="NEWIBANK" 	type="field"	from="{McpResponse}journalNumber" />
+				<case-map for="BNI_DIRECT" 	type="field"	from="{McpResponse}journalNumber" />
+				<case-map for="NEWMOBILE" 	type="field"	from="{McpResponse}journalNumber" />
+				<case-map for="API" 		type="field"	from="{McpResponse}journalNumber" />
+			</field>
+			<field method="auto"  from="DATE.dd/MM/yyyy HH:mm" 		to="{HostRequest}content/transactionDateTime"/>
+		</action>
+	
+		<!-- response(s) set -->
+		<response-set>
+			<field method="map"   from="{Request}Header"                          to="{Response}responseMessage[1]/Header"/>
+			<field method="map"   from="{Request}Body/PAYMENT_TYPE"               to="{Response}responseMessage[1]/Body{RX095491}/PAYMENT_TYPE"/>
+			<field method="map"   from="{Request}Body/CHANNEL"                    to="{Response}responseMessage[1]/Body{RX095491}/CHANNEL"/>
+			<field method="map"   from="{Request}Body/MCP_ID"                     to="{Response}responseMessage[1]/Body{RX095491}/MCP_ID"/>
+			<field method="map"   from="{Request}Body/h_performaNo"               to="{Response}responseMessage[1]/Body{RX095491}/h_performaNo"/>
+			<field method="map"   from="{Request}Body/h_serviceCode"              to="{Response}responseMessage[1]/Body{RX095491}/h_serviceCode"/>
+			<field method="map"   from="{Request}Body/h_vesselId"                 to="{Response}responseMessage[1]/Body{RX095491}/h_vesselId"/>
+			<field method="map"   from="{Request}Body/h_vesselName"               to="{Response}responseMessage[1]/Body{RX095491}/h_vesselName"/>
+			<field method="map"   from="{Request}Body/h_voyage"                   to="{Response}responseMessage[1]/Body{RX095491}/h_voyage"/>
+			<field method="map"   from="{Request}Body/h_performaDate"             to="{Response}responseMessage[1]/Body{RX095491}/h_performaDate"/>
+			<field method="map"   from="{Request}Body/h_customerName"             to="{Response}responseMessage[1]/Body{RX095491}/h_customerName"/>
+			<field method="map"   from="{Request}Body/h_npwp"                     to="{Response}responseMessage[1]/Body{RX095491}/h_npwp"/>
+			<field method="map"   from="{Request}Body/h_currency"                 to="{Response}responseMessage[1]/Body{RX095491}/h_currency"/>
+			<field method="map"   from="{Request}Body/h_amount"                   to="{Response}responseMessage[1]/Body{RX095491}/h_amount"/>
+			<field method="map"   from="{Request}Body/h_fee"                      to="{Response}responseMessage[1]/Body{RX095491}/h_fee"/>
+			<field method="map"   from="{Request}Body/h_totalAmount"              to="{Response}responseMessage[1]/Body{RX095491}/h_totalAmount"/>
+			<field method="map"   from="{Request}Body/h_billCode"                 to="{Response}responseMessage[1]/Body{RX095491}/h_billCode"/>
+			<field method="map"   from="{Request}Body/h_billName"              	  to="{Response}responseMessage[1]/Body{RX095491}/h_billName"/>
+			<field method="map"   from="{Request}Body/h_billShortName"            to="{Response}responseMessage[1]/Body{RX095491}/h_billShortName"/>
+			<field method="map"   from="{Request}Body/h_billAmount"               to="{Response}responseMessage[1]/Body{RX095491}/h_billAmount"/>
+			<field method="map"   from="{Request}Body/c_payMethod"                to="{Response}responseMessage[1]/Body{RX095491}/c_payMethod"/>
+			<field method="map"   from="{Request}Body/c_dbAccountNum"             to="{Response}responseMessage[1]/Body{RX095491}/c_dbAccountNum"/>
+			<field method="map"   from="{Request}Body/c_description"              to="{Response}responseMessage[1]/Body{RX095491}/c_description"/>
+			<field method="class" from="KTMT.paymentStatus"                		  to="{Response}responseMessage[1]/Body{RX095491}/h_transactionStatus"/>
+			<field method="map"   from="{Request}Header"                          to="{Response}responseMessage[2]/Header"/>
+			
+			<!-- receipt -->
+            <field method="const" from="KTMT"                             		  to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/paymentType"/>
+            <field method="map"   from="{Request}Body/h_performaNo"               to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/performaNo"/>
+			<field method="map"   from="{Request}Body/h_serviceCode"              to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/serviceCode"/>
+			<field method="map"   from="{Request}Body/h_vesselId"                 to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/vesselId"/>
+			<field method="map"   from="{Request}Body/h_vesselName"               to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/vesselName"/>
+			<field method="map"   from="{Request}Body/h_voyage"                   to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/voyage"/>
+			<field method="map"   from="{Request}Body/h_performaDate"             to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/performaDate" />
+			<field method="map"   from="{Request}Body/h_customerName"             to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/customerName"/>
+			<field method="map"   from="{Request}Body/h_npwp"                     to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/npwp"/>
+			<field method="map"   from="{Request}Body/h_currency"                 to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/currency"/>
+			<field method="map"   from="{Request}Body/h_amount"                   to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/amount" subMethod="formattedAmount"/>
+			<field method="map"   from="{Request}Body/h_fee"                      to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/fee" subMethod="formattedAmount"/>
+			<field method="map"   from="{Request}Body/h_totalAmount"              to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/totalAmount" subMethod="formattedAmount"/>
+			<field method="map"   from="{Request}Body/c_description"              to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/narrative"/>
+			<field method="map"   from="{HostRequest}content/transactionDateTime" to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/trxDate" />
+			<field method="class" from="KTMT.paymentStatus"                	to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/status"/>
+			<field method="map"   from="{Request}Header/teller"                   to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/tellerId"/>
+			<field method="map"   from="{Request}Header/branch"                   to="{Response}responseMessage[2]/Body{Receipt}/content{KTMTReceipt}/branchId"/>
+            <field method="map"   from="{Request}Header"                          to="{Response}responseMessage[3]/Header"/>
+            <field method="const" from="O.K"                                      to="{Response}responseMessage[3]/Body{OKMessage}/message"/>
+		</response-set>
+
+   </mhp-transaction>
+	
+</application>

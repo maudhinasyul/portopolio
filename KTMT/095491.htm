@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/TR/WD-xsl">
+	<xsl:template match="/">
+		<HTML>
+			<HEAD>
+				<TITLE>095491 : KTMT Payment</TITLE>
+				<META content="2.2" name="Version">
+				</META>
+				<META http-equiv="Content-type" content="Text/html; Charset=UTF-8" name="">
+				</META>
+				<META content="8.0.0" name="BANCS Version">
+				</META>
+				<META name="Creation_Date" CONTENT="Mon, 21 Oct, 2019 14:30:09">
+				</META>
+				<LINK type="Text/css" rel="stylesheet" href="../css/Screen_new.css">
+				</LINK>
+				<META name="Modifed_Date" CONTENT="Mon, 21 Oct, 2019 14:30:09">
+				</META>
+				<SCRIPT src="../HTML/CommonFunction.js" type="Text/javascript">
+				</SCRIPT>
+			</HEAD>
+			<BODY FNSType="SINGLEPAGESCREEN" bgcolor="#C0C0C0" Class="screen" onload="timer()">
+				<FORM class="transaction" style="WIDTH: 680px; HEIGHT: 450px" name="F095491" method="post" FNSType="Transaction" CustomAction="DefaultTransmit" TXTransaction="095491" RXTransaction="095491">
+					<FIELDSET class="frame_CRMFrame" id="fMainFrame" style="LEFT: 20px; WIDTH: 600px; POSITION: absolute; TOP: 10px; HEIGHT: 495px; POSITION: absolute" FNSType="frame">	
+						<FIELDSET class="prompt_1" id="fCustomerName" style="LEFT: 35px; POSITION: absolute; TOP: 70px; POSITION: absolute" FNSType="field">
+							Nama Pengguna Jasa
+							<INPUT class="fieldinput_readonly" id="iCustomerName" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="2" readOnly="-1" maxLength="100" size="13" name="h_customerName" FNSType="fieldinput" DisplayFormat="X(100)" TXField="h_customerName" RXField="h_customerName">
+							</INPUT>
+						</FIELDSET>   
+						<FIELDSET class="prompt_1" id="fBillingNo" style="LEFT: 35px; POSITION: absolute; TOP: 20px; POSITION: absolute" FNSType="field">
+							No Proforma
+							<INPUT class="fieldinput_readonly" id="iPerformaNo" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="1" readOnly="-1" maxLength="20" size="5" name="h_performaNo" FNSType="fieldinput" DisplayFormat="X(20)" TXField="h_performaNo" RXField="h_performaNo" mandatory="True">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fBillingDate" style="LEFT: 35px; POSITION: absolute; TOP: 45px; POSITION: absolute" FNSType="field">
+							Tanggal Proforma
+							<INPUT class="fieldinput_readonly" id="iPerformaDate" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="3" readOnly="-1" maxLength="16" size="13" name="h_performaDate" FNSType="fieldinput" DisplayFormat="X(20)" TXField="h_performaDate" RXField="h_performaDate">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fBillName" style="LEFT: 35px; POSITION: absolute; TOP: 195px; POSITION: absolute" FNSType="field">
+							Kode Jasa Pelayanan Kapal
+							<INPUT class="fieldinput_readonly" id="iServiceCode" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="1" readOnly="-1" maxLength="20" size="5" name="h_serviceCode" FNSType="fieldinput" DisplayFormat="X(20)" TXField="h_serviceCode" RXField="h_serviceCode" mandatory="True">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fCustomerName" style="LEFT: 35px; POSITION: absolute; TOP: 120px; POSITION: absolute" FNSType="field">
+							Kode Kapal
+							<INPUT class="fieldinput_readonly" id="iVesselId" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="2" readOnly="-1" maxLength="50" size="13" name="h_vesselId" FNSType="fieldinput" DisplayFormat="X(50)" TXField="h_vesselId" RXField="h_vesselId">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fCustomerName" style="LEFT: 35px; POSITION: absolute; TOP: 145px; POSITION: absolute" FNSType="field">
+							Nama Kapal
+							<INPUT class="fieldinput_readonly" id="iVesselName" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="2" readOnly="-1" maxLength="50" size="13" name="h_vesselName" FNSType="fieldinput" DisplayFormat="X(50)" TXField="h_vesselName" RXField="h_vesselName">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fCustomerName" style="LEFT: 35px; POSITION: absolute; TOP: 170px; POSITION: absolute" FNSType="field">
+							Voyage Kapal
+							<INPUT class="fieldinput_readonly" id="iVoyage" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="2" readOnly="-1" maxLength="50" size="13" name="h_voyage" FNSType="fieldinput" DisplayFormat="X(50)" TXField="h_voyage" RXField="h_voyage">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fCustomerName" style="LEFT: 35px; POSITION: absolute; TOP: 95px; POSITION: absolute" FNSType="field">
+							NPWP Pengguna Jasa
+							<INPUT class="fieldinput_readonly" id="iNpwp" style="LEFT: 225px; WIDTH: 300px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="2" readOnly="-1" maxLength="100" size="13" name="h_npwp" FNSType="fieldinput" DisplayFormat="X(100)" TXField="h_npwp" RXField="h_npwp">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fAmount" style="LEFT: 35px; POSITION: absolute; TOP: 220px; POSITION: absolute" FNSType="field">
+							Nilai Tagihan 
+							<INPUT class="fieldinput_readonly" id="iAmount" style="LEFT: 225px; WIDTH: 160px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="5" readOnly="-1" size="5" name="h_amount" FNSType="fieldinput" DisplayFormat="S9(14)V9(3)" TXField="h_amount" RXField="h_amount" FieldType="BancsNumber">
+							</INPUT>
+						</FIELDSET>
+						<INPUT class="fieldinput_readonly" id="iBillCurrency" style="LEFT: 423px; WIDTH: 41px; POSITION: absolute; TOP: 220px; HEIGHT: 22px; POSITION: absolute" tabIndex="6" readOnly="-1" size="1" name="h_billCurrency" FNSType="fieldinput" DisplayFormat="X(3)" TXField="h_currency" RXField="h_currency">
+						</INPUT>
+						<FIELDSET class="prompt_1" id="fFee" style="LEFT: 35px; POSITION: absolute; TOP: 245px; POSITION: absolute" FNSType="field">
+							Biaya Admin Bank
+							<INPUT class="fieldinput_readonly" id="iFee" style="LEFT: 225px; WIDTH: 160px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="5" readOnly="-1" size="5" name="h_fee" FNSType="fieldinput" DisplayFormat="S9(14)V9(3)" TXField="h_fee" RXField="h_fee" FieldType="BancsNumber">
+							</INPUT>
+						</FIELDSET>
+						<INPUT class="fieldinput_readonly" id="iFeeCurrency" style="LEFT: 423px; WIDTH: 41px; POSITION: absolute; TOP: 245px; HEIGHT: 22px; POSITION: absolute" tabIndex="6" readOnly="-1" size="1" name="h_feeCurrency" FNSType="fieldinput" DisplayFormat="X(3)" TXField="h_currency" RXField="h_currency">
+						</INPUT>
+						<FIELDSET class="prompt_1" id="fTotal" style="LEFT: 35px; POSITION: absolute; TOP: 270px; POSITION: absolute" FNSType="field">
+							Total Tagihan
+							<INPUT class="fieldinput_readonly" id="iTotal" style="LEFT: 225px; WIDTH: 160px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="5" readOnly="-1" size="5" name="h_totalAmount" FNSType="fieldinput" DisplayFormat="S9(14)V9(3)" TXField="h_totalAmount" RXField="h_totalAmount" FieldType="BancsNumber">
+							</INPUT>
+						</FIELDSET>
+						<INPUT class="fieldinput_readonly" id="iTotalCurrency" style="LEFT: 423px; WIDTH: 41px; POSITION: absolute; TOP: 270px; HEIGHT: 22px; POSITION: absolute" tabIndex="6" readOnly="-1" size="1" name="h_totalCurrency" FNSType="fieldinput" DisplayFormat="X(3)" TXField="h_currency" RXField="h_currency">
+						</INPUT>
+						
+						<FIELDSET class="prompt_1" id="fLine" style="LEFT: 35px; WIDTH: 475px; POSITION: absolute; TOP: 305px; HEIGHT: 23px; POSITION: absolute" FNSType="label" name="garis">
+							<hr size="2.0" width="100%" color="black">
+						</FIELDSET>
+						
+						<FIELDSET class="combobox" id="fPayMethod" style="LEFT: 35px; WIDTH: 120px; POSITION: absolute; TOP: 325px; POSITION: absolute" FNSType="combobox">
+							Pembayaran
+							<SELECT class="comboboxselect_mandatory" id="iPayMethod" style="LEFT: 225px; WIDTH: 102px; POSITION: absolute; TOP: 0px; POSITION: absolute" tabIndex="10" onchange="checkPayMethod();" name="c_payMethod" FNSType="comboboxselect" TXField="c_payMethod" RXField="c_payMethod" FieldType="Digit" SelectionSet="jenisPembayaran2.htm" searchAble="false">
+								<OPTION value="2" selected="-1">Transfer</OPTION>
+							</SELECT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fAccountNum" style="LEFT: 35px; POSITION: absolute; TOP: 350px; POSITION: absolute" FNSType="field">
+							Nomor Rekening
+							<INPUT class="fieldinput_mandatory" id="iAccountNum" style="LEFT: 225px; WIDTH: 127px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="11" maxLength="10" size="5" name="c_dbAccountNum" FNSType="fieldinput" DisplayFormat="9(10)" TXField="c_dbAccountNum" RXField="c_dbAccountNum" FieldType="Digit">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fDescription" style="LEFT: 35px; POSITION: absolute; TOP: 375px; POSITION: absolute" FNSType="field">
+							Narasi / Deskripsi
+							<INPUT class="fieldinput_1" id="iDescription" style="LEFT: 225px; WIDTH: 250px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="12" maxLength="30" size="21" name="c_description" FNSType="fieldinput" DisplayFormat="X(30)" TXField="c_description" RXField="c_description">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="prompt_1" id="fTransactionStatus" style="LEFT: 35px; POSITION: absolute; TOP: 400px; POSITION: absolute" FNSType="field">
+							Status 
+							<INPUT class="fieldinput_readonly" id="transactionStatus" style="LEFT: 225px; WIDTH: 250px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" tabIndex="13" maxLength="30" size="21" readOnly="-1" name="h_transactionStatus" FNSType="fieldinput" RXField="h_transactionStatus" TXField="h_transactionStatus" DisplayFormat="X(30)">
+							</INPUT>
+						</FIELDSET>
+						
+						<BUTTON class="button_transmit" id="bTransmit" style="LEFT: 275px; WIDTH: 113px; POSITION: absolute; TOP: 445px; HEIGHT: 25px; POSITION: absolute" accessKey="P" onclick="sendTransaction()" tabIndex="13" name="Transmit" FNSType="button" value="&lt;U&gt;P&lt;/U&gt;roses">
+							<U>P</U>roses
+						</BUTTON>
+						<BUTTON class="button_red" id="bClose" style="LEFT: 395px; WIDTH: 113px; POSITION: absolute; TOP: 445px; HEIGHT: 25px; POSITION: absolute" accessKey="T" onclick="CloseScreen()" tabIndex="14" name="Close" FNSType="button" value="&lt;U&gt;T&lt;/U&gt;utup">
+							<U>T</U>utup
+						</BUTTON>
+						   
+						<FIELDSET class="field_prompt" id="fPaymentType" style="LEFT: 35px; VISIBILITY: hidden; POSITION: absolute; TOP: 365px; POSITION: absolute" FNSType="field">
+							Payment Type 
+							<INPUT class="fieldinput" id="iPaymentType" style="LEFT: 110px; VISIBILITY: hidden; WIDTH: 177px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" size="35" name="PAYMENT_TYPE" FNSType="fieldinput" DisplayFormat="X(20)" TXField="PAYMENT_TYPE" RXField="PAYMENT_TYPE">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="field_prompt" id="fChannel" style="LEFT: 35px; VISIBILITY: hidden; POSITION: absolute; TOP: 390px; POSITION: absolute" FNSType="field">
+							Channel
+							<INPUT class="fieldinput" id="iChannel" style="LEFT: 110px; VISIBILITY: hidden; WIDTH: 177px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" size="35" name="CHANNEL" FNSType="fieldinput" DisplayFormat="X(10)" TXField="CHANNEL" RXField="CHANNEL">
+							</INPUT>
+						</FIELDSET>
+						<FIELDSET class="field_prompt" id="fMcpId" style="LEFT: 35px; VISIBILITY: hidden; POSITION: absolute; TOP: 415px; POSITION: absolute" FNSType="field">
+							MCP ID
+							<INPUT class="fieldinput" id="iMcpId" style="LEFT: 110px; VISIBILITY: hidden; WIDTH: 177px; POSITION: absolute; TOP: 0px; HEIGHT: 22px; POSITION: absolute" size="35" name="MCP_ID" FNSType="fieldinput" DisplayFormat="X(20)" TXField="MCP_ID" RXField="MCP_ID">
+							</INPUT>
+						</FIELDSET>						   
+					</FIELDSET>
+				</FORM>
+			</BODY>
+			<SCRIPT LANGUAGE="JavaScript">
+				function timer() {
+					setTimeout('load(); ', 100);
+				}
+
+				function load() {
+					//calculateTotalAmount();
+					disableIfAlreadyProcessed();
+					disableIfReinquiry();
+					changeButtonValue();
+				}
+
+				function calculateTotalAmount() {
+					var amount = getOriginalNumber(document.getElementById('iAmount').value);
+					var feeAdmin = getOriginalNumber(document.getElementById('iFee').value);
+					var total = amount + feeAdmin;
+
+					var totalBancs = parseToBancsNumber(total);
+					var amountBancs = parseToBancsNumber(amount);
+					var feeAdminBancs = parseToBancsNumber(feeAdmin);
+					
+					document.getElementById('iTotal').value = totalBancs;
+					document.getElementById('iAmount').value = amountBancs;
+					document.getElementById('iFee').value = feeAdminBancs;
+				}
+
+				function disableIfAlreadyProcessed() {
+					var message = parent.document.frames("StatusBar").document.all('statusText').innerText;
+
+					if(message != '') {
+						disableInputElements();
+					}
+				}
+				
+				function disableIfReinquiry() {
+				var type = document.getElementById('iPaymentType').value;
+				//alert(type);
+					if(type == 'KTMT_REINQ')
+					{
+						document.getElementById('iPayMethod').disabled = '1';
+						document.getElementById('iAccountNum').disabled = '1';
+						document.getElementById('iDescription').disabled = '1';
+					}
+				}
+				
+				function changeButtonValue(){
+					 
+					var paymentType = document.getElementById('iPaymentType').value;
+					var btnVal = document.getElementById('bTransmit');
+																			
+					if (paymentType == 'KTMT_REINQ')
+					{													
+						
+						btnVal.value     = "&lt;U&gt;C&lt;/U&gt;etak"; 
+						btnVal.innerHTML = "Cetak"; 
+						
+					}
+				}
+
+				function disableInputElements() {
+					var paymentMethod = document.getElementById('iPayMethod').value;
+
+					if(paymentMethod == '2') {
+						document.getElementById('iAccountNum').readOnly = '-1';
+						document.getElementById('iAccountNum').className = 'fieldinput_2';
+					}
+
+					document.getElementById('iDescription').readOnly = '-1';
+					document.getElementById('iDescription').className = 'fieldinput_2';
+					document.getElementById('iPayMethod').disabled = '1';
+					document.getElementById('bTransmit').disabled = '1';
+					document.getElementById('bTransmit').style.visibility = 'visible';
+				}
+											
+				function checkPayMethod() {
+					var paymentMethod = document.getElementById('iPayMethod').value;
+					var accountNum = document.getElementById('iAccountNum');
+					var reffElementId = 'fPayMethod';
+
+					if(paymentMethod == '1') {
+						accountNum.visibility = 'hidden';
+						accountNum.value = '';
+						
+						resetTopPosition('fDescription', 25, reffElementId);
+					} else {
+						accountNum.visibility = 'visible';
+						
+						resetTopPosition('fAccountNum', 25, reffElementId);
+						resetTopPosition('fDescription', 50, reffElementId);
+					}
+				}
+				
+				function resetTopPosition(elementId, space, reffElementId) {
+					var id = '';
+
+					if(reffElementId == '') {
+						id = elementId;
+					} else {
+						id = reffElementId;
+					}
+
+					var idPos = document.getElementById(id).style.top;
+					var boundary = idPos.indexOf('p');
+					var oldPos = parseInt(idPos.substring(0, boundary));
+					var newPos = oldPos + space;
+					document.getElementById(elementId).style.top = newPos.toString().concat('px');
+				}
+
+				function sendTransaction() {
+					var transmitVisibility = document.getElementById('bTransmit').style.visibility;
+					var type = document.getElementById('iPaymentType').value;
+					
+					if(transmitVisibility != "visible") {
+						if(true) {
+							window.document.forms(0).SendTransaction();
+							disableInputElements();
+						}
+					}
+				}
+				
+				function validateFields() {
+					var valid = false;
+					
+					var paymentMethod = document.getElementById('iPayMethod').value;
+					var accountNum = document.getElementById('iAccountNum').value;
+					var totalAmount = document.getElementById('iTotal').value;
+					var help = 'Mohon hubungi helpdesk.';
+
+					if(paymentMethod == '2' && accountNum == '') {
+						alert('Mohon isi Nomor Rekening');
+					} else if(totalAmount == '0.00') {
+					valid = true;
+						//alert('Mohon Ulangi Transaksi.');
+					} else {
+						valid = true;
+					}
+
+					return valid;
+				}
+			</SCRIPT>
+		</HTML>
+	</xsl:template>
+</xsl:stylesheet>
